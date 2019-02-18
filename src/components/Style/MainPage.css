@@ -1,0 +1,61 @@
+.Front-page-image {
+  max-height: 40rem;
+  min-height: 40rem;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.8;
+  z-index: -1;
+  background-image: url('../images/chamonix.jpg');
+  background-size: cover;
+  background-position-y: 45%;
+}
+
+.Overlap-section {
+  margin: -5rem auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 94%;
+  height: 30rem;
+  align-self: center;
+  z-index: 1;
+}
+
+.Overlap-section a {
+  width: 33%;
+  margin: 2rem;
+  z-index: 0;
+  background-color: white;
+  text-decoration: none;
+}
+
+.Overlap-section a:hover .Overlap-label-image {
+  opacity: 0.6;
+}
+
+.Overlap-label-image {
+  width: 100%;
+  opacity: 0.9;
+  background-color: white;
+  height: 100%;
+  font-weight: bolder;
+  font-size: 3rem;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.Overlap-label-image-1 {
+  background-image: url('../images/buffalo.jpg');
+}
+
+.Overlap-label-image-2 {
+  background-image: url('../images/flower_path.jpg');
+}
+
+.Overlap-label-image-3 {
+  background-image: url('../images/cactus.jpg');
+}
