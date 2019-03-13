@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
+// import AppBar from '@material-ui/core/AppBar';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import ButtonBase from '@material-ui/core/ButtonBase';
-import IconButton from '@material-ui/core/IconButton';
-import Linkedin from './svgIcons/Linkedin';
-import Facebook from './svgIcons/Facebook';
-import Github from './svgIcons/Github';
+import { Menu, Icon } from 'semantic-ui-react';
 import { Route, Switch } from "react-router-dom";
 
 // Components
@@ -21,79 +13,74 @@ import Photos from './components/Photos';
 
 import './App.css';
 
-const styles = {
-  root: {
-    flexGrow: 1,
-    fontFamily: "Sarabun, Helvetica Neue, sans-serif"
-  },
-  grow: {
-    flexGrow: 1,
-    fontSize: "1.4rem",
-    fontFamily: "Sarabun, Helvetica Neue, sans-serif"
-  },
-
-  typographyTitle: {
-    fontSize: "2rem",
-    fontFamily: "Sarabun, Helvetica Neue, sans-serif"
-  },
-
-  grey: {
-    background: '#efefef',
-    color: 'black',
-    fontFamily: "Sarabun, Helvetica Neue, sans-serif"
-  },
-};
-
 class App extends Component {
+  state = {}
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
   render() {
-    const { classes } = this.props;
+    const { activeItem } = this.state;
+
     return (
       <main className="App">
-        <AppBar position="static" className={classes.grey}>
-          <Toolbar>
-            <ButtonBase href="/">
-              <Typography className={classes.typographyTitle} variant="h6" color="inherit">
-                Mia Froehling Gallier
-              </Typography>
-            </ButtonBase>
-            <div className={classNames("App-menu-buttons", classes.grow)}>
-              <Button className={classes.grow} color="inherit" href="/about">About</Button>
-              <Button className={classes.grow} color="inherit" href="/experience">Experience</Button>
-              <Button className={classes.grow} color="inherit" href="/photos">Photos</Button>
-            </div>
-            <div className="App-social-buttons">
-              <IconButton color="inherit" aria-label="Menu">
-                <a href="https://www.linkedin.com/in/mia-froehling-gallier">
-                 <Linkedin />
-                </a>
-              </IconButton>
-              <IconButton color="inherit" aria-label="Menu">
-                <a href="https://www.facebook.com/Miafroehlinggallier">
-                 <Facebook />
-                </a>
-              </IconButton>
-              <IconButton color="inherit" aria-label="Menu">
-                <a href="https://github.com/miafg">
-                 <Github />
-                </a>
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
+        <Menu className="App-menu" borderless attached='top' fluid size='massive'>
+          <Menu.Item line href="/" header className="App-menu-header" position="left">Mia Froehling Gallier</Menu.Item>
+          <Menu.Menu className="App-menu-items">
+            <Menu.Item
+              name='about'
+              as='a'
+              link
+              href='/aboutme'
+              active={ activeItem === 'about' }
+              onClick={this.handleItemClick}
+            >
+              About
+            </Menu.Item>
+            <Menu.Item
+              name='experience'
+              as='a'
+              link
+              href='/experience'
+              active={ activeItem === 'experience' }
+              onClick={this.handleItemClick}
+            >
+              Experience
+            </Menu.Item>
+            <Menu.Item
+              name='photos'
+              as='a'
+              link
+              href='/photos'
+              active={ activeItem === 'photos' }
+              onClick={this.handleItemClick}
+            >
+              Photos
+            </Menu.Item>
+          </Menu.Menu>
+          <Menu.Menu className="App-social-buttons" position="right">
+            <Menu.Item as='a' href="https://www.linkedin.com/in/mia-froehling-gallier" target="_blank">
+              <Icon name='linkedin' />
+            </Menu.Item>
+            <Menu.Item as='a' href="https://www.facebook.com/Miafroehlinggallier" target="_blank">
+              <Icon name='facebook f' />
+            </Menu.Item>
+            <Menu.Item as='a' href="https://github.com/miafg" target="_blank">
+              <Icon name='github' />
+            </Menu.Item>
+          </Menu.Menu>
+        </Menu>
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/aboutme" component={AboutMe} />
           <Route path="/experience" component={Experience} />
           <Route path="/photos" component={Photos} />
         </Switch>
+        <footer className="App-Footer">
+          Created by Mia Froehling Gallier
+        </footer>
       </main>
     );
   }
 }
 
-App.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-
-export default withStyles(styles)(App);
+export default App;

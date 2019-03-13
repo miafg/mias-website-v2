@@ -1,19 +1,27 @@
 import React from 'react';
+import { Image, Icon } from 'semantic-ui-react';
+
 import './Style/MainPage.css';
 
 const MainPage = () => (
-  <div className="App">
-    <div className="Front-page-image" />
+  <div className="Main-page">
+    <Image className="Front-page-image" />
     <div className="App-main-content">
       <div className="Overlap-section">
         <a href="/aboutme">
-          <div className="Overlap-label-image Overlap-label-image-1">About Me</div>
+          <Image className="Overlap-image Overlap-image-1">
+            <div className="Overlap-label">About Me</div>
+          </Image>
         </a>
         <a href="/experience">
-          <div className="Overlap-label-image Overlap-label-image-2">Experience</div>
+          <Image className="Overlap-image Overlap-image-2">
+            <div className="Overlap-label">Experience</div>
+          </Image>
         </a>
-        <a href="/photos" >
-          <div className="Overlap-label-image Overlap-label-image-3">Photos</div>
+        <a href="/photos">
+          <Image className="Overlap-image Overlap-image-3">
+            <div className="Overlap-label">Photos</div>
+          </Image>
         </a>
       </div>
     </div>
