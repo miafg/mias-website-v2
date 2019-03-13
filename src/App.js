@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <main className="App">
         <Menu className="App-menu" borderless attached='top' fluid size='massive'>
-          <Menu.Item line href="/" header className="App-menu-header" position="left">Mia Froehling Gallier</Menu.Item>
+          <Menu.Item link href="/" header className="App-menu-header" position="left">Mia Froehling Gallier</Menu.Item>
           <Menu.Menu className="App-menu-items">
             <Menu.Item
               name='about'
