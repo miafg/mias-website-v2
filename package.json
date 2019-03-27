@@ -17,7 +17,10 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run react-start\"",
     "react-start": "npm run start --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --exec babel-node server.js --ignore client"
+    "server": "nodemon --exec babel-node server.js --ignore client",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=prod && npm run build"
+
   },
   "author": "Mia Froehling Gallier",
   "license": "ISC"
