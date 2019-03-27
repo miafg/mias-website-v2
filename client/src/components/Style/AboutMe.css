@@ -1,0 +1,28 @@
+.About-me {
+  background-image: url('../images/pies.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  position: relative;
+  background-position: center;
+}
+
+.About-me-description {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #00000082;
+  padding: 10%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}

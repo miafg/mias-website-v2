@@ -1,0 +1,99 @@
+.Experience {
+  flex: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2rem 1rem;
+  justify-content: center;
+}
+
+.ui.card:not(.Experience-child-card) {
+  margin: 1em 1.3rem !important;
+}
+
+.ui.card:first-child {
+  margin-top: 1em;
+}
+
+.ui.card.Experience-mega-card {
+  padding: 1em !important;
+  display: flex;
+}
+
+.Experience-mega-card-header {
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.Experience-subheader {
+  margin: 0 !important;
+}
+
+.Experience-subheader-desc {
+  margin: 0 !important;
+}
+
+.Experience-rotations {
+  display: flex;
+  flex-direction: row;
+  border-top: none!important;
+  padding: 0 !important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Experience-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.Experience-skills-edu {
+  width: auto !important;
+  flex-wrap: wrap;
+  flex: 0 0 25%;
+}
+
+.Experience-leadership {
+  width: auto !important;
+  flex-wrap: wrap;
+  flex: 1 0 40%;
+}
+
+.Experience-column-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-break: normal;
+  white-space: nowrap;
+}
+
+.Experience-child-card-headers {
+  flex-grow: 0 !important;
+  background-color: #b9aa8030 !important;
+}
+
+.Experience-child-card {
+  margin: 0 !important;
+}
+
+.Experience-child-card-vertical {
+  margin-bottom: 1rem !important;
+  flex: 0 0 49%;
+  width: auto !important;
+}
+
+.Experience-child-card-horizontal {
+  margin: 0.5% !important;
+  flex: 0 0 32% !important;
+  width: auto!important;
+}
+
+.Experience-child-card-container-cols {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Experience-skills-edu-header {
+  background-color: #b9aa8030 !important;
+}
