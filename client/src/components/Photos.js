@@ -14,7 +14,7 @@ class Photos extends Component {
   }
 
   callPhotoGalleryAPI = async () => {
-    const url = "/photogallery" + (this.state.nextCursor ? `?next_cursor=${this.state.nextCursor}` : '');
+    const url = "/api/photogallery" + (this.state.nextCursor ? `?next_cursor=${this.state.nextCursor}` : '');
     const response = await fetch(url);
     const body = await response.json();
 
