@@ -1,16 +1,13 @@
-
 const express = require('express');
 var request = require('request');
-const app = express();
 const bodyParse = require('body-parser');
 const path = require('path');
 
+const app = express();
 const port = process.env.PORT || 5000;
 
-
-
 // create a GET route
-app.get('/photogallery', (req, res) => {
+app.get('/api/photogallery', (req, res) => {
   // res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
   const key = process.env.CLOUDINARY_KEY;
   const secret = process.env.CLOUDINARY_SECRET;
@@ -28,7 +25,7 @@ app.get('/photogallery', (req, res) => {
 });
 
 // create a GET route
-app.get('/photogallery:nextCursor', (req, res) => {
+app.get('/api/photogallery:nextCursor', (req, res) => {
   // res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
   const key = process.env.CLOUDINARY_KEY;
   const secret = process.env.CLOUDINARY_SECRET;
@@ -46,7 +43,7 @@ app.get('/photogallery:nextCursor', (req, res) => {
 });
 
 // create a GET route
-app.get('/homepageimages', (req, res) => {
+app.get('/api/homepageimages', (req, res) => {
   // res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
   const key = process.env.CLOUDINARY_KEY;
   const secret = process.env.CLOUDINARY_SECRET;
