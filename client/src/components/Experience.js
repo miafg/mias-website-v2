@@ -7,9 +7,29 @@ const Experience = () => (
   <div className="Experience">
     <Card fluid className="ui card Experience-mega-card">
       <Card.Content>
-        <Card.Header className="Experience-mega-card-header" as='h2'>Current Role</Card.Header>
+        <Card.Header className="Experience-mega-card-header" as='h2'>Roles</Card.Header>
       </Card.Content>
       <Card.Content>
+        <Card.Meta as="h2" className="Experience-subheader">
+          Full-Stack Internal Tools Developer
+        </Card.Meta>
+      </Card.Content>
+      <Card.Content className="Experience-role">
+        <Card centered color='olive' className="Experience-child-card Experience-child-card-horizontal">
+          <Card.Content className="Experience-child-card-headers">
+            <Card.Header as="h1">Bluprint</Card.Header>
+          </Card.Content>
+          <Card.Content>
+            I collaborate with coworkers in different areas of the business to learn about pain-points in their processes.
+            From these pain-points, I defined features to make their processes more efficient. I implement them on our administrative website by building out backend Java REST apis and a front-end React web interface.
+            I also integrated a new DAM (digital asset management) system with our microservices and internal tooling using AWS Python lambdas, AWS SQS and AWS SNS Topics. </Card.Content>
+          <Card.Content extra>
+            <Icon name='calendar outline' />
+            Jul 2019 - Present
+          </Card.Content>
+        </Card>
+      </Card.Content>
+      <Card.Content className="Experience-subheader-wrapper">
         <Card.Meta as="h2" className="Experience-subheader">
           CORE Technology Associate
         </Card.Meta>
@@ -28,7 +48,7 @@ const Experience = () => (
           </Card.Content>
           <Card.Content extra>
             <Icon name='calendar outline' />
-            Jan 2019 - Present
+            Jan 2019 - Jul 2019
           </Card.Content>
         </Card>
         <Card centered color='olive' className="Experience-child-card Experience-child-card-horizontal">
@@ -62,9 +82,9 @@ const Experience = () => (
       </Card.Content>
     </Card>
     <div className="Experience-group">
-      <Card className="Experience-leadership">
+      <Card fluid className="Experience-leadership ui card Experience-mega-card">
         <Card.Content>
-          <Card.Header>Leadership Roles</Card.Header>
+          <Card.Header className="Experience-mega-card-header" as='h2'>Leadership Roles</Card.Header>
         </Card.Content>
         <Card.Content className="Experience-child-card-container-cols">
           <Card className="Experience-child-card Experience-child-card-vertical" centered color='olive'>
@@ -72,10 +92,10 @@ const Experience = () => (
               <Card.Header as="h1">CORE Tech CommSquad</Card.Header>
               <Card.Meta>Co-Lead</Card.Meta>
             </Card.Content>
-            <Card.Content>As the communications committee co-lead, I planned and delegate tasks in order to
-              write/edit articles, and publish a quarterly CORE Tech newsletter, <i>The CATALYST</i>.
-              I created and maintain website to publish <i>The CATALYST</i>.
-              I also facilitate our collaboration with CORE Finance to publish monthly editions of PPN Pulse.
+            <Card.Content>I planned and delegate tasks in order to
+              write and edit articles, and publish a quarterly CORE Tech newsletter, <i>The CATALYST</i>.
+              I created and maintained a website to publish <i>The CATALYST</i>.
+              I also facilitated our collaboration with CORE Finance to publish monthly editions of PPN Pulse.
               </Card.Content>
             <Card.Content extra>
               <Icon name='calendar outline' />
@@ -86,9 +106,9 @@ const Experience = () => (
             <Card.Content className="Experience-child-card-headers">
               <Card.Header as="h1">CORE Tech Alumni Committee</Card.Header>
             </Card.Content>
-            <Card.Content>I co-lead the alumni committee's buddy program, where we match
+            <Card.Content>I co-lead the alumni committee's buddy program, where we matched
               current associates with incomming associates to provide them an informal mentorship.
-              I organize local meetups with CORE Tech associates to foster a sense of community.
+              I organized local meetups with CORE Tech associates to foster a sense of community.
               I identified an opportunity for collaboration across all committess to create a unified CORE Tech website.</Card.Content>
             <Card.Content extra>
               <Icon name='calendar outline' />
@@ -124,13 +144,13 @@ const Experience = () => (
               <Grid.Column>
                 <Grid.Row className="Experience-column-title">Intermediate</Grid.Row>
                 <Grid.Row>
-                  Ocaml, AngularJS, Python, SQL, Telemetry, Splunk, C++
+                  Python, PostgreSQL, AWS (SQS, SNS, Lambda, EC2), Ocaml, Telemetry, Splunk, AngularJS
                 </Grid.Row>
               </Grid.Column>
               <Grid.Column>
                 <Grid.Row className="Experience-column-title">Learning</Grid.Row>
                 <Grid.Row>
-                  GoLang, Docker, Kubernetes, Concourse, Vue.js, Algolia, GraphQL
+                  GoLang, Docker, Kubernetes, Concourse, Vue.js, Algolia, GraphQL, Terraform
                 </Grid.Row>
               </Grid.Column>
             </Grid>

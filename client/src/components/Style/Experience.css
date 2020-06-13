@@ -25,12 +25,21 @@
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
+.Experience-subheader-wrapper {
+  margin: 0 1em !important;
+}
+
 .Experience-subheader {
   margin: 0 !important;
 }
 
 .Experience-subheader-desc {
   margin: 0 !important;
+}
+
+.Experience-role {
+  border-top: none!important;
+  padding: 0 0 1em 0 !important;
 }
 
 .Experience-rotations {
